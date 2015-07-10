@@ -1,7 +1,10 @@
 # role-required_vars
 Error out if `required_vars` are not defined or blank ('').
+
 Error out if `required_vars_defined` are not defined.
+
 Error out if `required_vars_blank` are blank.
+
 
 # Example playbook
 
@@ -32,5 +35,5 @@ Error out if `required_vars_blank` are blank.
       - 'two'
       - 'three'
   roles:
-    - { role: required_vars }
+    - { role: required_vars, required_vars_defined: ['one', 'two', 'three'] }
 ```
