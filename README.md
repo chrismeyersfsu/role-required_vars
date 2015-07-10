@@ -20,7 +20,7 @@ Error out if `required_vars_blank` are blank.
 ```
 
 ```
-- name: "Only check for variabled defined, not blank"
+- name: "Only ensure that variables are defined."
   hosts: local
   gather_facts: false
   vars:
