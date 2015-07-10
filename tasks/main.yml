@@ -1,6 +1,5 @@
-- { include: defined.yml }
-- { include: blank.yml }
 - include: defined.yml
-  required_vars: '{{ required_vars_defined }}'
 - include: blank.yml
-  required_vars: '{{ required_vars_blank }}'
+- include: defined_only.yml
+- include: blank_only.yml
+

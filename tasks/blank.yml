@@ -1,6 +1,4 @@
 - name: 'Ensure variables not blank'
   fail: 'msg="Variable {{item}} is blank"'
-  when: "required_vars_blank is defined and {{ item }} == ''"
-  #with_items: "required_vars|default(required_vars_blank)"
-  with_items: "required_vars"
-  register: result
+  when: item == ''
+  with_items: '{{ required_vars|default([]) }}'
