@@ -1,5 +1,7 @@
 # role-required_vars
-Ansible role to enforce required variables
+Error out if `required_vars` are not defined or blank ('').
+Error out if `required_vars_defined` are not defined.
+Error out if `required_vars_blank` are blank.
 
 # Example playbook
 
