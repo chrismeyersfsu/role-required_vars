@@ -30,10 +30,6 @@ Error out if `required_vars_blank` are blank.
     - one: 1
     - two: 2
     - three: ''
-    - required_vars_defined:
-      - 'one'
-      - 'two'
-      - 'three'
   roles:
     - { role: required_vars, required_vars_defined: ['one', 'two', 'three'] }
 ```
