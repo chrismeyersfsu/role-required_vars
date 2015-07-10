@@ -1,13 +1,6 @@
-- name: 'Ensure variables defined'
-  fail: 'msg="Variable {{item}} not defined"'
-  when: "item is not defined"
-  with_items: required_vars
-  register: result
-  tags: required_vars_defined
-
-- name: 'Ensure variables not blank'
-  fail: 'msg="Variable {{item}} is blank"'
-  when: "{{ item }} == ''"
-  with_items: required_vars
-  register: result
-  tags: required_vars_blank
+- { include: defined.yml }
+- { include: blank.yml }
+- include: defined.yml
+  required_vars: '{{ required_vars_defined }}'
+- include: blank.yml
+  required_vars: '{{ required_vars_blank }}'
