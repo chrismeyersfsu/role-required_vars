@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/chrismeyersfsu/role-required_vars.svg)](https://travis-ci.org/chrismeyersfsu/role-required_vars)
+
 # role-required_vars
 Error out if `required_vars` are not defined or blank ('').
 
